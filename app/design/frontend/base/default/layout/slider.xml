@@ -5,20 +5,20 @@
       <block type="core/text" name="google.cdn.jquery.slider" >
         <action method="setText" ifconfig="price_slider/price_slider_settings/include_jquery">
           <text>
-            <![CDATA[<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script><script type="text/javascript">jQuery.noConflict();</script>]]>
+            <![CDATA[<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><script>jQuery.noConflict();</script>]]>
           </text>
         </action>
       </block> 
       <block type="core/text" name="google.cdn.jquery.ui" >
         <action method="setText" ifconfig="price_slider/price_slider_settings/include_jquery_ui">
           <text>
-            <![CDATA[<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>]]>
+            <![CDATA[<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>]]>
           </text>
         </action>
       </block>
 	  
       <action method="addCss" ifconfig="price_slider/price_slider_settings/slider_loader_active">
-        <script>css/slider/jquery-ui-1.8.23.custom.css</script>
+        <script>css/slider/jquery-ui-1.10.3.min.css</script>
       </action>
     </reference>
     <reference name="content">
@@ -30,19 +30,19 @@
       <block type="core/text" name="google.cdn.jquery.slider" >
         <action method="setText" ifconfig="price_slider/price_slider_settings/include_jquery">
           <text>
-            <![CDATA[<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script><script type="text/javascript">jQuery.noConflict();</script>]]>
+            <![CDATA[<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><script>jQuery.noConflict();</script>]]>
           </text>
         </action>
       </block>
       <block type="core/text" name="google.cdn.jquery.ui" >
         <action method="setText" ifconfig="price_slider/price_slider_settings/include_jquery_ui">
           <text>
-            <![CDATA[<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>]]>
+            <![CDATA[<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>]]>
           </text>
         </action>
       </block>
       <action method="addCss" ifconfig="price_slider/price_slider_settings/slider_loader_active">
-        <script>css/slider/jquery-ui-1.8.23.custom.css</script>
+        <script>css/slider/jquery-ui-1.10.3.min.css</script>
       </action>
     </reference>
     <reference name="footer">
