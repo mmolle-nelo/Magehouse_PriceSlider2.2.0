@@ -443,8 +443,9 @@ class Magehouse_Slider_Block_Catalog_Layer_Filter_Price extends Mage_Catalog_Blo
 	*/
 	public function setMaxPrice() {
 		if ((isset($_GET['q']) && !isset($_GET['max'])) || !isset($_GET['q'])) {
+			$max = $this->_productCollection->getMaxPrice();
 			$this->_maxPrice = ceil($this->_productCollection->getMaxPrice());
-			$this->_searchSession->setMaxPrice($this->_maxPrice);
+			$this->_searchSession->setMaxPrice($this->_maxPrice + 5);
 		} else {
 			$this->_maxPrice = $this->_searchSession->getMaxPrice();
 		}

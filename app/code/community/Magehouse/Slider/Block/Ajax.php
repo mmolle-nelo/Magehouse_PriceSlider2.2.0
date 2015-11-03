@@ -1,11 +1,11 @@
-<?php 
+<?php
 
-class Magehouse_Slider_Block_Ajax extends Mage_Core_Block_Template{
-	public function __construct(){
-		
+class Magehouse_Slider_Block_Ajax extends Mage_Core_Block_Template {
+	public function __construct() {
+		parent::__construct([]);
 		$this->config = Mage::getStoreConfig('price_slider');
 		$this->url = Mage::getStoreConfig('web/unsecure/base_url');
-		
+
 		$this->ajaxSlider = $this->config['ajax_conf']['slider'];
 		$this->ajaxLayered = $this->config['ajax_conf']['layered'];
 		$this->ajaxToolbar = $this->config['ajax_conf']['toolbar'];
@@ -14,14 +14,14 @@ class Magehouse_Slider_Block_Ajax extends Mage_Core_Block_Template{
 		$this->loadingText = $this->config['ajax_conf']['loading_text'];
 		$this->loadingTextColor = $this->config['ajax_conf']['loading_text_color'];
 		$this->loadingImage = $this->config['ajax_conf']['loading_image'];
-		if($this->loadingImage == '' || $this->loadingImage == null){
-			$this->loadingImage = $this->url.'media/magehouse/slider/default/ajax-loader.gif';
-		}else{
-			$this->loadingImage = $this->url.'media/magehouse/slider/default/'.$loadingImage;
-		}	
+		if ($this->loadingImage == '' || $this->loadingImage == null) {
+			$this->loadingImage = $this->url . 'media/magehouse/slider/default/ajax-loader.gif';
+		} else {
+			$this->loadingImage = $this->url . 'media/magehouse/slider/default/' . $this->loadingImage;
+		}
 	}
-	
-	public function getCallbackJs(){
+
+	public function getCallbackJs() {
 		return Mage::getStoreConfig('price_slider/ajax_conf/afterAjax');
 	}
 }
