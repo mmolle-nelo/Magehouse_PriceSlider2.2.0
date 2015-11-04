@@ -48,7 +48,7 @@
 		
 	});
 
-<?php if($this->ajaxSlider || $this->ajaxLayered): ?>
+<?php if((bool)$this->getData('ajax_slider') || (bool)$this->getData('ajax_layered')): ?>
 /*DONOT EDIT THIS CODE*/
 function sliderAjax(url) {
     if (!active) {
