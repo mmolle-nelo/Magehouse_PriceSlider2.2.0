@@ -119,10 +119,9 @@ class Magehouse_Slider_Block_Catalog_Layer_Filter_Price extends Mage_Catalog_Blo
 		if ($this->getSliderStatus()) {
 			$text = '
 				<div class="price">
-					' . $this->getPriceDisplayType() . '
 					<div id="slider-range"></div>
-					
-				</div>' . $this->getSliderJs();
+					'. $this->getPriceDisplayType() .'
+					</div>' . $this->getSliderJs();
 
 			return $text;
 		}
@@ -158,7 +157,9 @@ class Magehouse_Slider_Block_Catalog_Layer_Filter_Price extends Mage_Catalog_Blo
 	* @return currency
 	*/
 	public function getCurrencySymbol() {
-		return Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol();
+		return Mage::app()->getStore()->getCurrentCurrencyCode();
+
+		//return Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol();
 	}
 
 	/*
