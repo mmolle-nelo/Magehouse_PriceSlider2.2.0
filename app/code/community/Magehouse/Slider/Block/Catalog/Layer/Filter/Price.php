@@ -100,7 +100,7 @@ class Magehouse_Slider_Block_Catalog_Layer_Filter_Price extends Mage_Catalog_Blo
 				</div>';
 		} else {
 			$html = '<p>
-					<input type="text" id="amount" readonly="readonly" style="background:none; border:none;" value="' . $this->getCurrencySymbol() . $this->getCurrMinPrice() . " - " . $this->getCurrencySymbol() . $this->getCurrMaxPrice() . '" />
+					<input type="text" id="amount" readonly="readonly" style="background:none; border:none;" value="' . Mage::helper('core')->currency($this->getCurrMinPrice(), TRUE, FALSE) . " &ndash; " . Mage::helper('core')->currency($this->getCurrMaxPrice(), TRUE, FALSE) . '" />
 					</p>';
 		}
 		return $html;
@@ -120,7 +120,7 @@ class Magehouse_Slider_Block_Catalog_Layer_Filter_Price extends Mage_Catalog_Blo
 			$text = '
 				<div class="price">
 					<div id="slider-range"></div>
-					'. $this->getPriceDisplayType() .'
+					' . $this->getPriceDisplayType() . '
 					</div>' . $this->getSliderJs();
 
 			return $text;
